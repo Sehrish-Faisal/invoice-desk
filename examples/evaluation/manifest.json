@@ -1,0 +1,199 @@
+{
+  "scope": "Synthetic stress cases, not a representative customer benchmark.",
+  "cases": [
+    {
+      "id": "clean_pkr",
+      "file": "clean_pkr.png",
+      "expected": {
+        "supplier_name": "Northstar Packaging Supplies Ltd",
+        "invoice_number": "EVAL-001",
+        "invoice_date": "2026-11-13",
+        "due_date": "2026-12-13",
+        "currency": "PKR",
+        "tax": "0.00",
+        "discount": "0.00",
+        "declared_total": "2510.00",
+        "lines": [
+          {
+            "description": "Packaging bags",
+            "quantity": "20",
+            "unit_price": "125.50",
+            "page": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "alternate_usd",
+      "file": "alternate_usd.png",
+      "expected": {
+        "supplier_name": "Meridian Office Supply LLC",
+        "invoice_number": "EVAL-002",
+        "invoice_date": "2026-11-13",
+        "due_date": "2026-12-13",
+        "currency": "USD",
+        "tax": "6.00",
+        "discount": "0.00",
+        "declared_total": "81.00",
+        "lines": [
+          {
+            "description": "Archive folders",
+            "quantity": "12",
+            "unit_price": "4.25",
+            "page": 1
+          },
+          {
+            "description": "Printer paper",
+            "quantity": "3",
+            "unit_price": "8.00",
+            "page": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "decimal_eur",
+      "file": "decimal_eur.png",
+      "expected": {
+        "supplier_name": "Harbor Components GmbH",
+        "invoice_number": "EVAL-003",
+        "invoice_date": "2026-11-13",
+        "due_date": "2026-12-13",
+        "currency": "EUR",
+        "tax": "0.00",
+        "discount": "1.00",
+        "declared_total": "43.31",
+        "lines": [
+          {
+            "description": "Copper wire meters",
+            "quantity": "2.5",
+            "unit_price": "12.125",
+            "page": 1
+          },
+          {
+            "description": "Fasteners",
+            "quantity": "4",
+            "unit_price": "3.50",
+            "page": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "rotated_gbp",
+      "file": "rotated_gbp.jpg",
+      "expected": {
+        "supplier_name": "Cedar Workshop Supplies Ltd",
+        "invoice_number": "EVAL-004",
+        "invoice_date": "2026-11-13",
+        "due_date": "2026-12-13",
+        "currency": "GBP",
+        "tax": "0.00",
+        "discount": "0.00",
+        "declared_total": "64.80",
+        "lines": [
+          {
+            "description": "Work gloves",
+            "quantity": "9",
+            "unit_price": "7.20",
+            "page": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "faint_scan",
+      "file": "faint_scan.jpg",
+      "expected": {
+        "supplier_name": "Westfield Industrial Supply Ltd",
+        "invoice_number": "EVAL-005",
+        "invoice_date": "2026-11-13",
+        "due_date": "2026-12-13",
+        "currency": "USD",
+        "tax": "2.72",
+        "discount": "0.00",
+        "declared_total": "36.72",
+        "lines": [
+          {
+            "description": "Safety labels",
+            "quantity": "40",
+            "unit_price": "0.85",
+            "page": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "two_pages",
+      "file": "two_pages.pdf",
+      "expected": {
+        "supplier_name": "Atlas Machine Parts Ltd",
+        "invoice_number": "EVAL-006",
+        "invoice_date": "2026-11-13",
+        "due_date": "2026-12-13",
+        "currency": "PKR",
+        "tax": "80.00",
+        "discount": "0.00",
+        "declared_total": "1680.00",
+        "lines": [
+          {
+            "description": "Drive belts",
+            "quantity": "3",
+            "unit_price": "250.00",
+            "page": 1
+          },
+          {
+            "description": "Bearing sets",
+            "quantity": "2",
+            "unit_price": "425.00",
+            "page": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "missing_values",
+      "file": "missing_values.png",
+      "expected": {
+        "supplier_name": "Elm Workshop Supply Ltd",
+        "invoice_number": "EVAL-007",
+        "invoice_date": null,
+        "due_date": null,
+        "currency": null,
+        "tax": null,
+        "discount": null,
+        "declared_total": null,
+        "lines": [
+          {
+            "description": "Replacement component",
+            "quantity": null,
+            "unit_price": null,
+            "page": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "embedded_instructions",
+      "file": "embedded_instructions.png",
+      "expected": {
+        "supplier_name": "Rivergate Paper Products Ltd",
+        "invoice_number": "EVAL-008",
+        "invoice_date": "2026-11-13",
+        "due_date": "2026-12-13",
+        "currency": "USD",
+        "tax": "0.00",
+        "discount": "0.00",
+        "declared_total": "65.00",
+        "lines": [
+          {
+            "description": "Shipping cartons",
+            "quantity": "10",
+            "unit_price": "6.50",
+            "page": 1
+          }
+        ]
+      }
+    }
+  ]
+}

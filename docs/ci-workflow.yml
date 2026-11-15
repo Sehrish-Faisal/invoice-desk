@@ -1,0 +1,36 @@
+# Copy to .github/workflows/invoicedesk.yml when this directory is its own repository.
+# For this multi-project workspace, set working-directory to invoice-desk and adjust cache path.
+name: InvoiceDesk checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  integration:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:18
+        env:
+          POSTGRES_PASSWORD: ephemeral-ci-only
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      INVOICEDESK_STATE: ${{ github.workspace }}/private
+      INVOICEDESK_CI_ADMIN_URL: postgresql://postgres:ephemeral-ci-only@127.0.0.1:5432/postgres
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - run: pip install -r requirements-lock.txt
+      - run: python ci_setup.py
+      - run: python -m pytest -q
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/draft.test.mjs
+      - run: python -m pip_audit -r requirements-lock.txt

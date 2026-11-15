@@ -1,0 +1,2 @@
+external_id,reference,supplier_external_id,currency,line_id,description,quantity,unit_price
+PO-001,ERP-PO-001,V-001,PKR,1,Packaging bags,100,125.50
